@@ -2,8 +2,7 @@
 set -e -u
 
 getNerdFont() {
-	commit=5454877c01e5efb4b902151655f75d950678dc34
-	url="https://github.com/ryanoasis/nerd-fonts/raw/$commit/patched-fonts/${2}"
+	url="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/${2}"
 	local_file=app/src/main/assets/fonts/$1.ttf
 	echo "Fetching $url ..."
 	curl -fLo "${local_file}" "${url}"
@@ -42,8 +41,8 @@ getNerdFont Inconsolata \
 getNerdFont Iosevka \
 	"Iosevka/Regular/complete/Iosevka%20Nerd%20Font%20Complete%20Mono.ttf"
 
-getNerdFont "JetBrains-Mono" \
-	"JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Regular%20Nerd%20Font%20Complete.ttf"
+getNerdFont JetBrains-Mono \
+	"JetBrainsMono/Ligatures/Regular/complete/JetBrains%20Mono%20Nerd%20Font%20Complete%20Mono%20Regular.ttf"
 
 getNerdFont LiberationMono \
 	"LiberationMono/complete/Literation%20Mono%20Nerd%20Font%20Complete%20Mono.ttf"
@@ -58,7 +57,7 @@ getNerdFont Monoid \
 	"Monoid/Regular/complete/Monoid%20Regular%20Nerd%20Font%20Complete%20Mono.ttf"
 
 getNerdFont OpenDyslexic \
-	"OpenDyslexic/Regular/complete/OpenDyslexic%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
+	"OpenDyslexic/Regular/complete/OpenDyslexic%20Regular%20Nerd%20Font%20Complete.otf"
 
 getNerdFont Roboto \
 	"RobotoMono/Regular/complete/Roboto%20Mono%20Nerd%20Font%20Complete%20Mono.ttf"
